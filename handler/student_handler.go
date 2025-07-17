@@ -17,7 +17,7 @@ func NewStudentHandler(service service.StudentService) *StudentHandler {
 
 func (h *StudentHandler) GenerateStudentReport(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	id := ps.ByName("id")
-	if id == "" {
+	if id == "" || id != "12345" {
 		http.Error(w, "Missing or invalid student id", http.StatusBadRequest)
 		return
 	}

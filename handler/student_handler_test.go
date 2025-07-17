@@ -23,16 +23,16 @@ func TestGenerateStudentReport_Success(t *testing.T) {
 
 	handler := NewStudentHandler(&mockStudentService{
 		GenerateReportFunc: func(id string) ([]byte, error) {
-			assert.Equal(t, "123", id)
+			assert.Equal(t, "12345", id)
 			return mockPDF, nil
 		},
 	})
 
-	req := httptest.NewRequest(http.MethodGet, "/api/v1/students/123/report", nil)
+	req := httptest.NewRequest(http.MethodGet, "/api/v1/students/12345/report", nil)
 	rr := httptest.NewRecorder()
 
 	// simulate httprouter.Params
-	params := httprouter.Params{httprouter.Param{Key: "id", Value: "123"}}
+	params := httprouter.Params{httprouter.Param{Key: "id", Value: "12345"}}
 
 	handler.GenerateStudentReport(rr, req, params)
 

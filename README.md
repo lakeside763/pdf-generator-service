@@ -43,7 +43,7 @@ The project is organized into several packages, each with a specific responsibil
 You can use a tool like `curl` to test the endpoint:
 
 ```sh
-curl -o report.pdf http://localhost:4500/api/v1/students/123/report
+curl -o report.pdf http://localhost:4500/api/v1/students/12345/report
 ```
 
 This will download the generated PDF report for the student with ID `123` and save it as `report.pdf`.
