@@ -2,6 +2,9 @@
 
 A simple Go microservice that generates a PDF report for a given student ID.
 
+### Author
+- Moses Idowu
+
 ## Overview
 
 This service exposes a single HTTP endpoint to generate a PDF document containing a student's details. It works by:
