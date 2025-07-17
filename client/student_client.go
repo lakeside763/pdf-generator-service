@@ -25,7 +25,7 @@ func NewStudentClient(baseURL string) StudentClient {
 		Timeout:     5 * time.Second,
 		MaxRequests: 1,
 		ReadyToTrip: func(counts gobreaker.Counts) bool {
-			return counts.ConsecutiveFailures > 3
+			return counts.ConsecutiveFailures > 1
 		},
 	}
 	return &studentClient{
