@@ -47,10 +47,6 @@ This will download the generated PDF report for the student with ID `123` and sa
 
 ## Getting Started
 
-### Prerequisites
-
--   Go (version 1.18 or later)
-
 ### Running the Service
 
 1.  Clone the repository and navigate into the project directory.
